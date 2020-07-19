@@ -19,6 +19,9 @@ body {
 	text-shadow: 1px  1px 1px white;
 	color: black;
 }
+.navbar-brand a:hover,.navbar-brand a:focus{
+  text-decoration: none;
+}
 #nav-list {
   margin-top: 10px;
 }
@@ -61,16 +64,23 @@ body {
 
 
   @media (min-width: 1200px){
-
+#navlist{
+  display: none;
+}
   }
 
 
 
   @media (min-width: 992px) and (max-width: 1199px){
-  	
+
+  	#navlist{
+  display: none;
+}
+.col-sm-6{
+  width:50%;
+}
   }
   @media (min-width: 768px) and (max-width: 991px){
-  	.col-sm-6{
-  		width: 100%;
+  	
   	}
   }
