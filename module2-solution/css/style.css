@@ -19,7 +19,7 @@ p {
 	margin: 0;
 }
 
-.container {
+.container{
 	border: none;
 	margin-left: auto;
 	margin-right: auto;
@@ -39,7 +39,7 @@ section {
 	overflow: auto;
 }
 
-#chicken {
+div #chicken {
 	border: 1px solid black;
 	text-align: center;
 	width: 30%;
@@ -130,7 +130,7 @@ section {
     width: 100%;
   }
 
-}
+
 
 
 
@@ -175,7 +175,7 @@ section {
   .col-md-12 {
     width: 100%;
   }
-}
+
 
 /* Mobile view */
 
@@ -220,4 +220,4 @@ section {
   .col-sm-12 {
     width: 100%;
   }
-}
+
