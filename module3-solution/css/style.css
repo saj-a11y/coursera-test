@@ -42,6 +42,14 @@ body {
   clear: both;
   margin-top: -30px;
 }
+ #collapsable-nav a { /* Collapsed nav menu text */
+    font-size: 1.2em;
+  }
+  #collapsable-nav a span { /* Collapsed nav menu glyph */
+    font-size: 1em;
+    margin-right: 5px;
+  }
+
 #title{
 	font-size: 25px;
 	color: black;
@@ -64,8 +72,7 @@ body {
 
 
   @media (min-width: 1200px){
-#navlist{
-  display: none;
+
 }
   }
 
@@ -73,11 +80,7 @@ body {
 
   @media (min-width: 992px) and (max-width: 1199px){
 
-  	#navlist{
-  display: none;
-}
-.col-sm-6{
-  width:50%;
+
 }
   }
   @media (min-width: 768px) and (max-width: 991px){
