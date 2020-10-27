@@ -1,0 +1,470 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background: black;
+    /* background: url(img/coding.jpg); */
+
+}
+#particles-js{
+    height: 100%;
+    width: 100%;
+    background: black;
+    z-index: -1;
+    color: white;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    z-index: 1111;;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #042331;
+    transition: .4s;
+}
+.sidebar header{
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    line-height: 80px;
+    background: #063416;
+    user-select: none;
+    font-weight: bold;
+}
+.sidebar ul a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgbs(255,255,255,.1);
+    border-bottom: 1px solid black;
+    transition:  all .4s;
+
+}
+ul a:hover {
+    padding-left: 50px;
+    text-decoration: dashed;
+    background-color: white;
+    color: black;
+    font-size: 25px;
+
+}
+.active{
+    /* padding-left: 50px; */
+    text-decoration: dashed;
+    background-color: black;
+    color: black;
+    font-size: 25px;
+
+
+}
+
+.sidebar ul li a i{
+    margin-right: 16px;
+}
+ul{
+    list-style: none;
+}
+#cheakbox{
+    display: none;
+}
+label #btn,label #cancel{
+    position: absolute;
+    cursor: pointer;
+    background: #042331;
+    border-radius: 3px;
+    z-index: auto;
+    
+}
+label #btn{
+    left: 40px;
+    top: 25px;
+    font-size: 35px;
+    color: white;
+    padding: 6px 12px;
+    transition:  all .5s;
+    float: right;
+    position: fixed;
+    z-index: 1111;
+}
+label #cancel{
+    position: fixed;
+    z-index: 11111;
+    left: -195px;
+    top: 17px;
+    font-size:  20px; 
+    color: #0a5075;
+    padding: 4px 9px;
+    transition: all .5s ease;
+}
+label #cancel:hover{
+    box-shadow: 2px 2px 2px 2px grey 
+}
+label #btn:hover{
+    border-top:  1px solid wheat;
+    border-left: 1px solid white;
+    border-bottom: 1px solid blueviolet;
+    border-right: 1px solid #042331;
+}
+#cheakbox:checked~ .sidebar{
+    left: 0;
+}
+#cheakbox:checked~ label #btn{
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+}
+#cheakbox:checked~ label #cancel{
+    left: 195px;
+}
+#main{
+    background-image: url(../img/coding.jpg);
+
+    background-repeat: no-repeat;
+    transition: all .5s;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    
+    
+}
+#cheakbox:checked~ section{
+    margin-left: 250px;
+
+}
+.inner h1{
+    margin-left: 440px;
+    margin-top: 200px;
+    background:  black;
+    opacity: 0.7;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    width: fit-content;
+    font-size: 60px;
+    position: static;
+
+}
+.inner p{
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+.inner button{
+    background: white;
+    color:black;
+    margin-left: 630px;
+    transition: all.5s;
+    opacity: 0.6;
+}
+.inner button:hover{
+    background: transparent;
+    color: white;
+    /* font-size: 25px; */
+    /* border: 2px solid white; */
+}
+section #footer{
+    background-image: url(../img/footer.jpg);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.main{
+    width: 100%;
+    /* z-index: -1; */
+    margin-top: 50px;
+    margin-left: -30px;
+}
+a{
+    /* color: white; */
+}
+.box{
+    width: 150px;
+    height: 60px;
+    margin: 10px 0;
+    border: 2px solid pink;
+    position: relative;
+    overflow: hidden;
+}
+.box i{
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    color: white;
+    /* margin-top: 130px; */
+}
+.box::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:pink;
+    transition: all .4s;
+}
+.box:hover::before{
+    transform: translateY(-100%);
+}
+.tele{
+    border: 2px solid #0086cc;
+}
+
+.tele::before{
+    background-color: #0086cc;
+
+}
+.insta{
+    border: 2px solid #d61877;
+}
+
+.insta::before{
+    background-color:  #d61877;
+
+}
+.twit{
+    border: 2px solid #466a7e;
+}
+
+.twit::before{
+    background-color:  #466a7e;
+
+}
+.face{
+    border: 2px solid #3040d1;
+}
+
+.face::before{
+    background-color:  #3040d1;
+
+}
+.box::after{
+    content: "FOLLOW";
+    /* color: green; */
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 60px;
+    font-weight: 700;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.1rem;
+    transition: all .4s;
+    transform: translateY(100%);
+}
+.box:hover::after{
+    transform: translateX(0);
+}
+.tele::after{
+    content: "JOIN";
+    color: #0086cc;
+}
+.insta::after{
+    /* content: "JOIN"; */
+    color: #d61877;
+}
+.twit::after{
+    color: #466a7e;
+}
+.face::after{
+    color: #3040d1;
+}
+#h2{
+    border: 2px solid white;
+    box-shadow: 10px 10px 5px grey;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+ #box1{
+    /* box-shadow: 5px 10px gray; */
+    z-index: 3;
+}
+#box2{
+    /* box-shadow: 5px 10px gray; */
+    color: white;
+    z-index: 3;
+    line-height: 40px;
+    text-align: center;
+}
+div .footer{
+    background-image: url(../img/footer.jpg);
+}
+#about{
+    margin-top: 100px;
+    color: white;
+    background:gray;
+    width: 1080px;
+    text-align: center;
+    transition: all .5s;
+   
+}
+h3{
+    font-weight: 900;
+}
+.jumbotron{
+    color: white;
+    text-align: center;
+    margin-top: 186px;
+
+}
+#h1{
+    margin-top: 0;
+}
+.jumbotron button{
+    color: white;
+}
+.jumbotron button:hover{
+    color: gray;
+    border: 2px solid gray;
+
+}
+.jumbotron h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 60px;
+    background: rgba(0, 0, 0, 0.5);
+
+    
+}
+.jumbotron p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    
+
+}
+#h1 h3{
+    background-color: #042331;
+    height: 100px;
+    justify-content:center;
+    font-size: 50px;
+}
+#h1 p{
+    margin-top:30px ;
+}
+#h3
+{
+    background-color: #063416;
+    line-height: 25px;
+    
+}
+#h3 h3{
+    background-color: black;
+    line-height: 40px;
+    margin-top: 25px;
+}
+#h3 h4{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+address{
+    background: rgba(0, 0, 0, 0.5);
+}
+footer{
+    background: rgba(133, 0, 0, 0.5);
+    line-height: 25px;
+
+}
+footer i{
+    color: white;
+    margin-right: 5px;
+}
+footer a{
+    color: azure;
+}
+
+
+footer a:hover{
+    text-decoration: none;
+    color: whitesmoke;
+    border-bottom: 2px solid whitesmoke;
+    animation: footer 5s infinite;
+}
+@keyframes footer{
+    from{border-bottom: 2px solid whitesmoke;}
+    to{border-bottom:  2px solid red;}
+}
+div h2{
+    margin-top: 100px;
+    font-size: 50px;
+}
+.foot i{
+    margin-left: 5px;
+}
+#certi{
+    margin-top: 40px;
+}
+.certiheader h1{
+    color: white;
+    background-color: #042331;
+    margin-top: 50px;
+    width: 100%;
+}
+.certi1{
+    margin-bottom: 50px;
+    background-color: #063416;
+    width: 1000px;
+    margin-left: 230px;
+}
+.certi1 ul a:hover{
+    text-decoration: none;
+    color: white;
+    background-color: transparent;
+    font-size: 16px;
+    padding-left: 0;
+}
+.clg{
+    width: 100%;
+    text-align: left;
+    /* margin-right: 300px; */
+    margin-top: 50px;
+}
+.edu{
+    color: aliceblue;
+    border-bottom: 2px solid white;
+    text-align: left;
+    width: fit-content;
+}
+#rs1,#rs2{
+    margin-bottom: 100px;
+}
+.col-lg-6,.col-md-6,.col-sm-12{
+    color: antiquewhite;
+}
+.certi1 section{
+    background-color:  #042331;
+}
+#resume{
+    margin-top: 170px;
+    background-color: #063416;
+}
+#rs3,#rs4{
+    margin-top: 100px;
+}
+@media(max-width:480px){
+    .center{
+        flex-direction: column;
+    }
+
+}
+
