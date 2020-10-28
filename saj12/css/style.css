@@ -127,8 +127,8 @@ label #btn:hover{
     left: 195px;
 }
 #main{
-    background-image: url(../img/coding.jpg);
-
+    background-image: url(../img/coding1.jpg);
+    background-attachment: fixed;
     background-repeat: no-repeat;
     transition: all .5s;
     background-position: center;
@@ -291,8 +291,8 @@ a{
     color: #3040d1;
 }
 #h2{
-    border: 2px solid white;
-    box-shadow: 10px 10px 5px grey;
+    /* border: 2px solid white; */
+    /* box-shadow: 10px 10px 5px grey; */
     border-radius: 10px;
     margin-top: 50px;
 }
@@ -306,7 +306,19 @@ a{
     z-index: 3;
     line-height: 40px;
     text-align: center;
+    /* margin-left: 20px; */
+    padding-left: 150px;
+    padding-top: 100px;
+
 }
+#box2 ul li{
+    font-size: 30px;
+    line-height: 50px;
+}
+#box2 ul li i{
+    margin-right: 10px;
+}
+
 div .footer{
     background-image: url(../img/footer.jpg);
 }
@@ -363,25 +375,31 @@ h3{
 #h1 p{
     margin-top:30px ;
 }
-#h3
+#h0
 {
     background-color: #063416;
     line-height: 25px;
-    
+    background-image: url(../img/about.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 #h3 h3{
     background-color: black;
     line-height: 40px;
     margin-top: 25px;
+    text-align: center;
 }
 #h3 h4{
     background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
 }
 address{
     background: rgba(0, 0, 0, 0.5);
+    text-align: center;
 }
 footer{
-    background: rgba(133, 0, 0, 0.5);
+    background: rgba(141, 5, 5, 0.5);
     line-height: 25px;
 
 }
@@ -411,8 +429,9 @@ div h2{
 .foot i{
     margin-left: 5px;
 }
-#certi{
-    margin-top: 40px;
+#certi1{
+    margin-top: 70px;
+    /* background: #063416; */
 }
 .certiheader h1{
     color: white;
@@ -455,16 +474,90 @@ div h2{
     background-color:  #042331;
 }
 #resume{
-    margin-top: 170px;
-    background-color: #063416;
+    margin-top: 70px;
+    /* background-color: #063416;
+     */
+     background: url(../img/resume.jpg);
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-attachment: fixed;
+     
 }
 #rs3,#rs4{
     margin-top: 100px;
+}
+#test{
+    background-image: url(../img/test.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-top: 70px;
+}
+.testheader h1{
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+   
 }
 @media(max-width:480px){
     .center{
         flex-direction: column;
     }
+   
 
+}
+.saj{
+    background-image: url(../img/resume.jpg);
+    
+}
+div .elon{
+    text-align: center;
+    margin-top: 200px;
+}
+#contact{
+    background-image: url(../img/contact.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 70px;
+    height: 100%;
+}
+.contact h1{
+   text-align: center;
+   color: bisque;
+   background-color: #042331;
+
+}
+#con1 address{
+    text-align: center;
+    margin-top: 200px;
+    background:none
+}
+input[type="text"]{
+    border: 2px solid black;
+    background: gray;
+    width: 500px;
+    height: 40px;
+}
+input[type="email"]{
+    background: gray;
+    border: 2px solid black;
+
+    width: 500px;
+    height: 40px;
+
+}
+textarea{
+    background: gray;
+    width: 500px;
+    border: 2px solid black;
+}
+input[type="submit"]{
+    background: gray;
+    width: 500px;
+    color: black;
+}
+label{
+    border-bottom: 2px solid black;
 }
 
