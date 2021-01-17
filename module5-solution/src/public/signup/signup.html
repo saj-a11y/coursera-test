@@ -1,0 +1,42 @@
+<div class="container">
+  <div ng-if="!signupCtrl.registered">
+    Sign up for our awesome newsletter by giving us your contact information
+    <form style="margin-top: 15px;" name="signupForm" novalidate>
+      <div style="margin-top: 20px;">
+        <div style="display: inline-block; width: 150px">First Name</div>
+        <div style="display: inline-block; color: black"><input autocomplete="off"type="text" name="FirstName" ng-model="signupCtrl.FirstName" required/>
+        </div>
+        <div style="color: orange;" ng-show="signupForm.FirstName.$error.required && signupForm.FirstName.$touched && signupForm.FirstName.$invalid " class="help-block">First name is required.</div>
+      </div>
+      <div style="margin-top: 20px;">
+        <div style="display: inline-block; width: 150px">Last Name</div>
+        <div style="display: inline-block;color: black"><input autocomplete="off"type="text" name="LastName" ng-model="signupCtrl.LastName" required/></div>
+        <div style="color: orange;" ng-show="signupForm.LastName.$error.required && signupForm.LastName.$touched &&signupForm.LastName.$invalid" class="help-block">Last name is required.</div>
+      </div>
+      <div style="margin-top: 20px;">
+        <div style="display: inline-block; width: 150px">eMail</div>
+        <div style="display: inline-block;color: black"><input type="email" name="Email" ng-model="signupCtrl.Email" required></div>
+        <div style="color: orange;" ng-show="signupForm.Email.$invalid && !signupForm.Email.$pristine">Valid eMail is rquired.</div>
+      <div style="color: orange;" ng-show="signupForm.Email.$error.required && signupForm.Email.$touched" > eMail is rquired. </div>
+    </div>
+      <div style="margin: 20px 0;">
+        <div style="display: inline-block; width: 150px">Phone Number</div>
+        <div style="display: inline-block;color: black"><input type="text" pattern="" name="Phone" ng-model="signupCtrl.Phone" required/></div>
+        <div style="color: orange;" ng-show="signupForm.Phone.$error.required && signupForm.Phone.$touched && signupForm.Phone.$invalid" class="help-block">Phone is required.</div>
+      </div>
+      <div style="margin: 20px 0;">
+        <div style="display: inline-block; width: 150px">Favorite Menu Item</div>
+        <div style="display: inline-block;color: black"><input autocomplete="off"menu-short-name-validator type="text" name="Favorite" ng-model="signupCtrl.Favorite"></div>
+      <div style="color: orange;" ng-if="signupForm.Favorite.$touched && signupCtrl.favoritevalidated==false">No Such Item Exists</div>
+    </div>
+
+      <br><br>
+    <div style="align:center;padding-left:30%;">
+      <button type="submit" class="btn btn-primary" ng-disabled="!signupForm.$valid" ng-click="signupCtrl.submitForm()">Submit</button>
+    </div>
+    </form>
+  </div>
+  <div ng-if="signupCtrl.registered">
+    Your information has been saved.
+  </div>
+</div>

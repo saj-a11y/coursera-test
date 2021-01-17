@@ -1,0 +1,29 @@
+<div>
+    <div ng-if="!myInfoCtrl.registeredUser.registered">Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a></div>
+    <div ng-if="myInfoCtrl.registeredUser.registered" style="width: 500px">
+        <div style="display: block;">
+            <div style="display:inline-block">First Name :</div>
+            <div style="display:inline-block;padding-left:10%">{{myInfoCtrl.registeredUser.userInfo.firstName}} </div>
+        </div>
+        <div style="display: block;">
+            <div style="display:inline-block">Last Name :</div>
+            <div style="display:inline-block;padding-left:10%">{{myInfoCtrl.registeredUser.userInfo.lastName}} </div>
+        </div>
+        <div style="display: block;">
+            <div style="display:inline-block">Email :</div>
+            <div style="display:inline-block;padding-left:10%">{{myInfoCtrl.registeredUser.userInfo.email}} </div>
+        </div>
+        <div style="display: block;">
+            <div style="display:inline-block">Phone  :</div>
+            <div style="display:inline-block;padding-left:10%">{{myInfoCtrl.registeredUser.userInfo.phone}} </div>
+        </div>
+        <div style="display:block;">
+            <div style="display:inline-block">Favorite :</div>
+            <div style="display:inline-block; font-weight:bolder;">
+                {{myInfoCtrl.favoriteName}}<br/><br/> {{myInfoCtrl.favoriteDesc}}
+                <br/><br/>
+                 <img ng-src="https://waleed-angularjs.herokuapp.com/images/{{myInfoCtrl.favoriteshort_name}}.jpg"/>
+            </div>
+        </div>
+    </div>
+</div>
