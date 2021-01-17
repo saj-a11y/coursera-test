@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ng-app='MenuApp'>
+<head>
+	<title>Module 4 Assignment</title>
+	<meta charset="utf-8">
+				<!-- librarie -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+	<script src="angular.min.js"></script>
+	<script src="angular-ui-router.min.js"></script>
+	
+				<!-- libraries -->
+	 <script src="data.module.js"></script>
+	<script src="menuapp.module.js"></script><!--Dependent on above-->
+	<script src="categories.component.js"></script><!--Data should be passed from service through one way binding-->
+	<script src="menudata.controller.js"></script>
+				<!--Service-->
+	<script src="menudata.service.js"></script>
+	
+				<!--Display-->
+	
+	
+	<!-- <script src="items.component.js"></script> -->
+
+				<!--Routers-->
+	<script src="routes.js"></script>
+	
+				<!--Style sheet-->
+	<style>
+		h1{
+			text-align: center;
+			color: brown;
+		}
+		.home{
+			text-align: center;
+			color: darkblue;
+			font-size: 30px;
+			font-weight: bolder;
+		}
+		nav{
+			text-align: center;
+		}
+		button{
+			text-align: center;
+			text-decoration: underline;
+			background-color: yellow;
+			opacity: 0.5;
+			padding: 20px;
+			border-radius: 10px;
+			
+		}
+		a{
+			color: black;
+			text-decoration: none;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>SEA LORD RESTAURANT
+	</h1>
+<br><br>
+	<nav><button><a ui-sref='home'>HOME</a></button>	 <button><a ui-sref='categories'>CATEGORIES</a></button>
+	</nav>
+<br><br><br><br><br>
+	<div class="home">
+		<ui-view> </ui-view>
+	</div>
+
+</body>
+</html>
